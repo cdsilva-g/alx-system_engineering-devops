@@ -10,3 +10,4 @@
 9-firstdirdeletio: deleting a directory
 10-back: move from current directory to previous directory
 11-back : list al files including the ones in boot
+12-file_type: script prints the type of file named.
