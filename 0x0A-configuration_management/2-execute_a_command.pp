@@ -2,4 +2,5 @@
 
 exec { 'killmenow':
     command => 'pkill killmenow',
+    onlyif  => 'ps aux | grep killmenow | grep -v grep',
 }
