@@ -1,13 +1,13 @@
-# Configuring a config file using puppet
+# Configuration of the client file
 
-file_line { "config file_name":
-    ensure => present,
-    line   => '    IdentityFile school',
-    path   => 'etc/ssh/ssh_config',
+file_line { 'Removing password requirement':
+  ensure => present,
+  line   => '    PasswordAuthentication no',
+  path   => '/etc/ssh/ssh_config',
 }
 
-file_line { "config password use":
-    ensure => present,
-    line   => '    PasswordAuthentication no',
-    path   => 'etc/ssh/ssh_config',
+file_line { 'Declaring file_name':
+  ensure => present,
+  line   => '    IdentityFile ~/.ssh/school',
+  path   => '/etc/ssh/ssh_config',
 }
